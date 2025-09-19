@@ -1,0 +1,107 @@
+/* LE SSERAFIM-inspired theme: sleek dark with pink-magenta accents */
+
+:root {
+  --bg: #0f0f12;
+  --card: #15151a;
+  --muted: #9aa0a6;
+  --text: #f1f3f5;
+  --accent: #ff2e7e; /* magenta-pink */
+  --accent-2: #8a2be2; /* electric purple for gradients */
+  --success: #2ecc71;
+  --danger: #ff4d6d;
+}
+
+html, body {
+  background: var(--bg) url('../assets/lesserafim.jpg') no-repeat center / cover fixed;
+  color: var(--text);
+}
+
+.navbar {
+  background: linear-gradient(90deg, rgba(255,46,126,0.15), rgba(138,43,226,0.15));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: var(--text) !important;
+}
+.navbar .nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+}
+
+.display-4, h1, h2, h3, h4, h5 {
+  color: var(--text);
+}
+
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-secondary {
+  background: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+.btn-outline-primary {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.btn-outline-primary:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.form-control, .form-control:focus, .custom-select, .form-control-file {
+  background: #1b1b21;
+  color: var(--text);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.text-success { color: var(--success) !important; }
+.text-danger { color: var(--danger) !important; }
+
+.alert-success {
+  background: rgba(46, 204, 113, 0.15);
+  color: var(--text);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+}
+.alert-danger {
+  background: rgba(255, 77, 109, 0.12);
+  color: var(--text);
+  border: 1px solid rgba(255, 77, 109, 0.35);
+}
+
+/* Links */
+a { color: var(--accent); }
+a:hover { color: #ff5aa0; }
+
+/* Images in cards */
+.card img { border-radius: 8px; }
+
+/* Consistent hero images on homepage cards */
+.home-card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* Optional brand logo next to the title in navbar */
+.brand-logo {
+  height: 28px;
+  width: auto;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+
+
